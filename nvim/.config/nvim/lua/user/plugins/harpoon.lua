@@ -10,13 +10,10 @@ local normal_mode_keymaps = {
   ["<Leader>he"] = ui.toggle_quick_menu,
 
   -- Keymaps to first 4 marked files
-  ["<C-h>"] = function() ui.nav_file(1) end,
-  ["<C-j>"] = function() ui.nav_file(2) end,
-  ["<C-k>"] = function() ui.nav_file(3) end,
-  ["<C-l>"] = function() ui.nav_file(4) end,
+  ["<C-j>"] = function() ui.nav_file(1) end,
+  ["<C-k>"] = function() ui.nav_file(2) end,
+  ["<C-l>"] = function() ui.nav_file(3) end,
 }
-
-vim.api.nvim_set_keymap('n', '<C-;>', ':lua print("hello")<CR>', {noremap=true})
 
 local keymaps = {
   ["n"] = normal_mode_keymaps,
