@@ -40,40 +40,40 @@ packer.init({
 
 -- Install plugins here
 return packer.startup(function(use)
-  use("wbthomason/packer.nvim")             -- Have packer manage itself
-  use("nvim-lua/plenary.nvim")              -- Useful lua functions used by lots of plugins
-  use("nvim-telescope/telescope.nvim")      -- Fuzzy finder
+  use("wbthomason/packer.nvim")              -- Have packer manage itself
+  use("nvim-lua/plenary.nvim")               -- Useful lua functions used by lots of plugins
+  use("nvim-telescope/telescope.nvim")       -- Fuzzy finder
   use({ "nvim-treesitter/nvim-treesitter" }) -- Syntax Highlight
-  use("ThePrimeagen/harpoon")               -- File pinning
-  use("mbbill/undotree")                    -- file history
-  use("lewis6991/gitsigns.nvim")            -- git management
+  use("ThePrimeagen/harpoon")                -- File pinning
+  use("mbbill/undotree")                     -- file history
+  use("lewis6991/gitsigns.nvim")             -- git management
 
   -- cmp plugins
-  use("hrsh7th/nvim-cmp")        -- The completion plugin
-  use("hrsh7th/cmp-buffer")      -- buffer completions
-  use("hrsh7th/cmp-path")        -- path completions
-  use("hrsh7th/cmp-cmdline")     -- cmdline completions
+  use("hrsh7th/nvim-cmp")         -- The completion plugin
+  use("hrsh7th/cmp-buffer")       -- buffer completions
+  use("hrsh7th/cmp-path")         -- path completions
+  use("hrsh7th/cmp-cmdline")      -- cmdline completions
   use("saadparwaiz1/cmp_luasnip") -- snippet completions
   use("hrsh7th/cmp-nvim-lsp")
   use("hrsh7th/cmp-nvim-lua")
 
   -- Snippets
-  use("L3MON4D3/LuaSnip")            -- snippet engine
+  use("L3MON4D3/LuaSnip")             -- snippet engine
   use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
-  use("saecki/crates.nvim")          -- cmp source for rust crates
+  use("saecki/crates.nvim")           -- cmp source for rust crates
 
-  use("neovim/nvim-lspconfig")       -- enable LSP
+  use("neovim/nvim-lspconfig")        -- enable LSP
   use({
     "williamboman/mason.nvim",
     run = ":MasonUpdate",
-  })                                    -- simple to use language server installer
+  })                                     -- simple to use language server installer
   use("williamboman/mason-lspconfig.nvim")
   use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
   use("RRethy/vim-illuminate")
 
   use("windwp/nvim-autopairs") -- autopairs for brackets
 
-  use("ggandor/leap.nvim")    -- blazingly fast horizontal movement
+  use("ggandor/leap.nvim")     -- blazingly fast horizontal movement
   use("tpope/vim-repeat")
 
   use("nvim-tree/nvim-tree.lua") -- File explorer
@@ -104,6 +104,8 @@ return packer.startup(function(use)
     end,
     requires = { "nvim-tree/nvim-web-devicons" },
   })
+
+  use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
 
 
   -- Automatically set up your configuration after cloning packer.nvim
